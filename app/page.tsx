@@ -5,21 +5,21 @@ import Inter from './components/inter'
 import useNote from './hooks/useNote'
 import Other from './components/other'
 import InterNote from './components/InterNote';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useState } from 'react';
 
 export default function Home() {
-
+  const [input, setInput] = useState('');
   const {notes, addNote, removeNote} = useNote()
 
-  const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>)  => {
-    event.preventDefault();
+  const handleOnClick = useCallback((e: React.MouseEvent<HTMLButtonElement>)  => {
+    e.preventDefault();
     addNote(input);
     console.log(input);
     setInput('');
-  }
+  },[input]);
 
-  const [input, setInput] = useState('');
+  
 
 
   return (
