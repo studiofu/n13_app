@@ -9,11 +9,16 @@ const InterNote = () => {
         <div className='
         flex
         flex-col
+        bg-blue-500/20
       '>
+        <div className='
+          flex
+          w-full
+        '>inner notes</div>
         {notes.map((note, index) => (
           <div key={index} className='
             flex
-            flex-row
+            flex-row            
           '>
             <p
               className='

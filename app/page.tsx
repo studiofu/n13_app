@@ -12,7 +12,8 @@ export default function Home() {
 
   const {notes, addNote, removeNote} = useNote()
 
-  const handleOnClick = () => {
+  const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>)  => {
+    event.preventDefault();
     addNote(input);
     console.log(input);
     setInput('');
@@ -48,6 +49,10 @@ export default function Home() {
         flex
         flex-col
       '>
+        <div className='
+          w-full
+          bg-red-500/20
+        '>outer notes</div>
         {notes.map((note, index) => (
           <div key={index} className='
             flex
