@@ -23,7 +23,12 @@ export default function Home() {
 
 
   return (
-    <main>this is main
+    <main className='flex flex-col' data-theme="light">this is main
+
+<div className="w-52 bg-white shadow rounded p-1 m-1">
+      w-52
+  </div>    
+
       <div>
         <input className='pl-1 appearance-none block bg-gray-200 text-gray-700 border border-gray-200 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 w-3/4 md:w-1/2 py-3'
         value={input}
@@ -71,6 +76,7 @@ export default function Home() {
       </div>
 
       <InterNote></InterNote>
+
 
     </main>    
   )
